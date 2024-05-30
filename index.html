@@ -1,0 +1,330 @@
+<!doctype html>
+
+<html>
+	
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+	
+<!--The following displays language used in browser to interpret page -->
+<meta charset="UTF-8">
+
+<!--The following line of code displays the page title on a browser tab -->
+<title>SLO Nostalgia | Home</title>
+
+<!--link tags are for linking to external files, in this case your CSS stylesheet-->
+<link href="style.css" rel="stylesheet" type="text/css">
+	
+<!--link tags are for linking to external files, in this case a special CSS stylesheet-->
+<link href="normalize.css" rel="stylesheet" type="text/css">
+
+<!--the following tag tells the browser to adjust the site according to screen size-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!--The following code links to the jquery library -->
+    <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+
+<!--The following code links to the javascript file that runs the slideshow -->	
+<script type="text/javascript" src="js/jquery.cycle2.min.js"></script>
+    
+<!--The following code links to the javascript file that runs the parallax image -->    
+<script src="js/parallax.min.js"></script>
+	
+<!--The following code links to Google Fonts-->
+<link href="https://fonts.googleapis.com/css?family=Raleway:900|Rubik" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	
+<!--The following javscript runs the jquery slideshow -->
+<script type="text/javascript">
+$('#slider').cycle({});
+</script>
+
+<!--The following javascript runs the nav bar which disappears on scroll-->
+<script type="text/javascript">
+// Hide Header on on scroll down
+var didScroll;
+var lastScrollTop = 0;
+var delta = 5;
+var navbarHeight = $('header').outerHeight();
+
+$(window).scroll(function(event){
+    didScroll = true;
+});
+
+setInterval(function() {
+    if (didScroll) {
+        hasScrolled();
+        didScroll = false;
+    }
+}, 250);
+
+function hasScrolled() {
+    var st = $(this).scrollTop();
+    
+    // Make sure they scroll more than delta
+    if(Math.abs(lastScrollTop - st) <= delta)
+        return;
+    
+    // If they scrolled down and are past the navbar, add class .nav-up.
+    // This is necessary so you never see what is "behind" the navbar.
+    if (st > lastScrollTop && st > navbarHeight){
+        // Scroll Down
+        $('header').removeClass('nav-down').addClass('nav-up');
+    } else {
+        // Scroll Up
+        if(st + $(window).height() < $(document).height()) {
+            $('header').removeClass('nav-up').addClass('nav-down');
+        }
+    }
+    
+    lastScrollTop = st;
+}
+</script>
+    
+<!--Favicon - images are in a folder called 'fav'-->
+<link rel="apple-touch-icon" sizes="180x180" href="img/fav/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="img/fav/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="img/fav/favicon-16x16.png">
+<link rel="manifest" href="img/fav/site.webmanifest">
+<link rel="mask-icon" href="img/fav/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+<!--End Favicon-->
+    
+<!--back to top button-->
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+<script>
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+    document.getElementById("myBtn").style.display = "block";
+  } else {
+    document.getElementById("myBtn").style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}    
+</script>   
+</head>
+
+<body>
+
+<!--beginning of navigation section-->
+<header>
+<div class="nav-container">
+<div class="brand"><img src="img/logo.png" width="190" height="75" alt=""/></div>
+<nav>
+<div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
+  <ul class="nav-list">
+        <li>
+          <a href="#home">Welcome</a>
+        </li>
+	   <li>
+          <a href="#gal">Beauty</a>
+		  </li>
+	  	<li>
+          <a href="#tl">The People</a>
+        </li>
+        <li>
+          <a href="#vid">Good Times</a>
+			</li>
+      <li>
+          <a href="#num">Back In Time</a>
+			</li>
+      </ul>
+</nav>
+</div>
+<!--closing navigation tag-->
+</header>
+<!--end of navigation section-->
+    
+<!--main image-->
+<div class="container">
+</div>
+<!--animated welcome-->
+<div class="wrapper">
+<!--animated welcome code here-->	
+</div>
+    
+<!--beginning of main content area-->
+<div class="row whiteBG">
+<h2 id="home">Welcome to SLO Nostalgia!</h2>
+<article>
+<p class="tab">Your gateway to the cherished memories and timeless charm of San Luis Obispo! Nestled on California's beautiful central coast, SLO is more than just a town—it's a treasure trove of delightful moments, captivating stories, and scenic beauty. This website is dedicated to celebrating the unique spirit and rich history of SLO through a vibrant collection of photos, videos, and more. Whether you're a lifelong resident, a former local, or simply a fan of this enchanting area, SLO Nostalgia is here to bring back the fond memories and remind you why we all hold a special place in our hearts for this small town.
+<p class="tab"><a href="#gal">What Makes Slo Beautiful?</a></p>
+</article>
+</div>
+
+<!--beginning of slideshow section-->
+<div class="row blueBG"><!--beginning of row-->
+<h2 id="gal">Beauty in the town</h2>
+<article><!--beginning of article-->
+<p class="tab">From iconic landmarks to hidden gems, these amazing photos showcase the essence of SLO. Whether it's a vibrant football game at sunset, serene coastal vistas, or the rolling hills of wine country, each image tells a story of why people love this enchanting town on the central coast. Explore the gallery and let the visual nostalgia transport you back to your favorite SLO moments.</p>
+<!--beginning of slideshow-->
+<div id="slider"
+data-cycle-caption="#alt-caption"
+data-cycle-caption-template="{{alt}}"
+data-cycle-fx="scrollHorz"
+data-cycle-pause-on-hover="true"
+data-cycle-speed="200">
+<div class="cycle-prev"></div>
+<div class="cycle-next"></div>
+<img src="img/1.jpg" width="100%" height="100%" alt="Architecture Graveyard | Arch Graveyard is a 9-acre experimental structure facility that hosts the annual Design Village competition. Students design and build shelters, engaging in the ultimate learn-by-doing experience. “This is the first time I’ve ever been to Arch Graveyard. I think the mushroom-looking house is pretty cool. Glad I started checking off things on my SLO bucket list,” said Ellery Carlson, Third-Year Child Development major." "/">
+     <img src="img/2.jpg" width="100%" height="100%" alt="Mustang Memorial Field | Cal Poly hosted UC Davis for the 2023-2024 Homecoming Football Game. Unfortunately, the Mustangs took a 31-13 loss against the Aggies. Nevertheless, the event brought together alumni, friends, and family. “I wish I had the opportunity to go to more games during my time here at Cal Poly… even if we don’t win all the time, it’s still fun to experience,” said Katie Roethler, Fourth-Year Business major."/>
+<img src="img/3.jpg" width="100%" height="100%" alt="Jespersen Hall | The Cal Poly P stands at 1,141 feet high. The texture of the P shows the wear and tear of time. Clubs, students, and community members change the color when sending a message… a message that can be seen from anywhere in SLO. “I thought it would take much longer to hike the P, but it only takes about 15 minutes and you get insane views of campus… so worth it,” said Ellery Carlson, Third-Year Child Development major."/>
+<img src="img/4.jpg" width="100%" height="100%" alt="Bishops Peak | A prominent landmark overseeing the city of San Luis Obispo, Bishop's Peak holds more than just scenic beauty within its rocky embrace. At its summit lies a plaque honoring the memory of Jefferson Bruckner, who tragically lost his life during the hike in 2005."/>
+<img src="img/5.jpg" width="100%" height="100%" alt="Dairy Creek Golf Course | A rainbow appears after a rainy and cloudy day during the second day of the 10th anniversary of the Shabang Music Festival. “I originally wasn’t going to go because it was so expensive, but I said f it and bought a ticket last minute. It’s senior year, which has become my excuse for doing anything,” said Katie Roethler, Fourth-Year Business major."/>
+<img src="img/6.jpg" width="100%" height="100%" alt="Serenity Swing | One of the most famous hikes in San Luis Obispo is the hike to the Serenity Swing. Reaching the swing requires a 3.8-mile (round-trip) route behind Poly Canyon Village. “The final push to get to the swing itself is so, so, so hard, but I love relaxing on the swing when I finally get up to the top,” said William Smithers, Fourth-Year Business major."/>
+<img src="img/7.jpg" width="100%" height="100%" alt="Cal Poly P | Ellery notices the radio tower on top of the hill near Highway 1. The tower on Cuesta Peak transmits signals for KCPR, Cal Poly’s Radio Station. With a ground elevation of more than 2,400 ft… anyone in San Luis Obispo can reach top-notch vibes. “I really like the alternative approach KCPR has… very different compared to most radio stations nowadays,” said Ellery."/>
+<img src="img/8.jpg" width="100%" height="100%" alt="Madonna Inn | Noted for its unique decor, pink dining room, and themed rooms… the Madonna Inn is an iconic place in San Luis Obispo. Ellery ran 4 miles along the bike path at the hotel that eventually leads to Downtown. “It’s a beautiful path and I loved seeing the different parts of the hotel while on my run,” said Ellery."/>
+<img src="img/9.jpg" width="100%" height="100%" alt="Los Osos | A grand view from Los Osos that looks towards Morro Rock. On this specific radiant day, Angel and his friends went to get High St Deli, a delicious SLO classic. “I didn’t think you would be able to see the rock from here. This would be a good place to take grad pics,” said William Smithers, Fourth-Year Business major."/>
+<img src="img/10.jpg" width="100%" height="100%" alt="Prefumo Canyon | Known for its breathtaking vistas and serene landscapes, Prefumo is a hidden gem that offers a peaceful retreat for hikers and nature lovers alike. Students come up here to watch the sunset, hang out in cars, and take a break from the city."/>
+</div><!--end of slideshow-->
+<!--beginning of slideshow caption-->
+<div id="alt-caption" class="center">
+</div><!--end of slideshow caption-->
+<p class="tab"><a href="#tl">WHO LIVES HERE?</a></p>
+</article><!--end of article-->
+</div><!--end of row-->
+<!--end of slideshow section-->
+	
+<!--beginning of audio section-->
+<div class="row whiteBG">
+<h2 id="tl">MEET THE PEOPLE WHO CALL SLO HOME</h2>
+<article>
+  <p class="tab">Click on images to hear what scent makes Cal Poly seniors nostalgic about SLO.<br>(Double-click to pause audio)</p>
+  <div class="table">
+	<div id="trip">
+<audio id="audio_1">
+    <source src="audio/1.mp3" type="audio/mpeg" />
+</audio>        
+<audio id="audio_2">
+    <source src="audio/2.mp3" type="audio/mpeg" />
+</audio>        
+<audio id="audio_3">
+	<source src="audio/3.mp3" type="audio/mpeg" />
+</audio>
+        
+<img src="img/rollover/1.gif" class="rollover" alt="description" onMouseOver="this.src='img/rollover/1.jpg'" onMouseOut="this.src='img/rollover/1.gif'" onClick="document.getElementById('audio_1').play(); return false;" onDblClick="document.getElementById('audio_1').pause(); return false;">
+ /&gt; 
+            
+<img src="img/rollover/2.gif" class="rollover" alt="description" onMouseOver="this.src='img/rollover/2.jpg'" onMouseOut="this.src='img/rollover/2.gif'" onClick="document.getElementById('audio_2').play(); return false;" onDblClick="document.getElementById('audio_2').pause(); return false;">
+ /&gt;
+            
+<img src="img/rollover/3.gif" class="rollover" alt="description" onMouseOver="this.src='img/rollover/3.jpg'" onMouseOut="this.src='img/rollover/3.gif'" onClick="document.getElementById('audio_3').play(); return false;" onDblClick="document.getElementById('audio_3').pause(); return false;">
+/&gt;
+	</div>
+</div>
+<p class="tab"><a href="#vid">SHOW ME A FUN VIDEO!</a></p>		
+</article>
+</div>
+<!--end of audio section-->
+    
+<!--beginning of parallax image-->
+<div class="parallax" data-parallax="scroll" data-bleed="10" data-speed="0.2" iosFix="true" data-image-src="img/parallax.jpg">
+</div>
+<!--end of parallax image-->
+
+<!--beginning of video section-->
+<div class="row orangeBG">
+<h2 id="vid">remembering the good times</h2>
+<article>
+<p class="tab">Take a trip down memory lane with this video compilation, showcasing the myriad ways people create unforgettable moments in San Luis Obispo. From sharing laughter under the sun-kissed skies of Avila Beach to the camaraderie of cheering on the Mustangs at a baseball game, each scene is a snapshot of cherished memories. Watch as friends gather to witness breathtaking sunsets, savoring the simple joys of life in SLO. Enjoy this captivating visual tribute to the good times people share in this beloved central coast town.</p>	
+<video width="100%" height="100%" poster="img/poster.jpg" controls>
+<source src="img/video.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+<p class="tab"><a href="#num">LETS GO BACK IN TIME...</a></p>
+</article>
+</div>
+<!--end of video section-->
+
+<!--beginning of infographic section-->
+<div class="row whiteBG">
+<h2 id="num">Throwing it back</h2>
+<article>
+<p class="tab"></p>
+<!--infographic embed code here-->
+</article>
+ <div style="position: relative; width: 100%; height: 0; padding-top: 250.0000%;
+ padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+ border-radius: 8px; will-change: transform;">
+  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+    src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAGF-PNj4TE&#x2F;Ui_V1pSpChodvIOB_PLShA&#x2F;view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+  </iframe>
+</div>
+<a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAGF-PNj4TE&#x2F;Ui_V1pSpChodvIOB_PLShA&#x2F;view?utm_content=DAGF-PNj4TE&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener">Full Infographic</a>
+</div>
+<!--end of infographic section-->
+	
+<!--beginning of footer-->
+<footer>SLO Nostalgia | San Luis Obispo, CA | <a href="mailto: rominamontemurro@gmail.com?Subject=Inquiry" target="_top">Send Email</a> | Copyright 2024 | Site by Angel Gaytan
+</footer>
+<!--end of footer-->
+	
+</body>
+	
+<!--the following script controls the responsive navigation-->
+<script>
+	(function($) { // Begin jQuery
+  $(function() { // DOM ready
+    // If a link has a dropdown, add sub menu toggle.
+    $('nav ul li a:not(:only-child)').click(function(e) {
+      $(this).siblings('.nav-dropdown').toggle();
+      // Close one dropdown when selecting another
+      $('.nav-dropdown').not($(this).siblings()).hide();
+      e.stopPropagation();
+    });
+    // Clicking away from dropdown will remove the dropdown class
+    $('html').click(function() {
+      $('.nav-dropdown').hide();
+    });
+    // Toggle open and close nav styles on click
+    $('#nav-toggle').click(function() {
+      $('nav ul').slideToggle();
+    });
+    // Hamburger to X toggle
+    $('#nav-toggle').on('click', function() {
+      this.classList.toggle('active');
+    });
+  }); // end DOM ready
+})(jQuery); // end jQuery
+	</script>
+	<script>
+	var headertext = [];
+var headers = document.querySelectorAll("#miyazaki th"),
+tablerows = document.querySelectorAll("#miyazaki th"),
+tablebody = document.querySelector("#miyazaki tbody");
+for(var i = 0; i < headers.length; i++) {
+	var current = headers[i];
+	headertext.push( current.textContent.replace( /\r?\n|\r/,"") );
+}
+for (var i = 0, row; row = tablebody.rows[i]; i++) {
+	for (var j = 0, col; col = row.cells[j]; j++) {
+		col.setAttribute("data-th", headertext[j]);
+	}
+}
+</script>
+	
+	<!----Prevents audio tracks from playing simultaneously---->
+<script>
+document.addEventListener('play', function(e){
+    var audios = document.getElementsByTagName('audio');
+    for(var i = 0, len = audios.length; i < len;i++){
+        if(audios[i] != e.target){
+            audios[i].pause();
+        }
+    }
+}, true);
+    </script>
+
+</html>
